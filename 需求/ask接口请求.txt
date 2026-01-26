@@ -1,0 +1,60 @@
+请求网址
+http://52.82.11.208:8050/brain/faq/session/ask
+请求方法
+POST
+状态代码
+200 OK
+远程地址
+127.0.0.1:7890
+引荐来源网址政策
+strict-origin-when-cross-origin
+access-control-allow-credentials
+true
+access-control-allow-headers
+*
+access-control-allow-methods
+GET, POST, PUT, OPTIONS
+access-control-allow-origin
+*
+connection
+keep-alive
+content-type
+text/event-stream
+date
+Fri, 23 Jan 2026 07:35:25 GMT
+keep-alive
+timeout=4
+proxy-connection
+keep-alive
+server
+nginx/1.25.1
+transfer-encoding
+chunked
+accept
+text/event-stream
+accept-encoding
+gzip, deflate
+accept-language
+zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7
+authorization
+6cd4db42-ec0a-421f-b2be-e753e53f2c83
+content-length
+267
+content-type
+application/json
+host
+52.82.11.208:8050
+origin
+http://52.82.11.208:8050
+proxy-connection
+keep-alive
+referer
+http://52.82.11.208:8050/web-dashboard/0/chat?robotId=89040136787200
+tenant-id
+1916705084137349121
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+
+
+载荷：{"robot_id":"89040136787200","robotBizId":89040136787201,"incremental":false,"status":"1","chatId":76915096880703,"user_input":"北方稀土收入及利润情况","newChatId":null,"answerId":76915372186864,"askId":76915372186865,"pageNum":1,"pageSize":10,"appId":"0"}
+
