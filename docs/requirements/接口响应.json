@@ -1,0 +1,558 @@
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION",
+    "status": "START"
+}
+
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION_THOUGHT",
+    "status": "START"
+}
+
+data: {
+    "content": "##",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": " 思",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "考",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "\n- **知识",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "引用**：根据",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "知识库，问题",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "“光伏行业分红",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "比例高的前5",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "家公司”涉及的是",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "财务分红数据的",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "分析，尤其是“",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "累计分红比例”",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "这一指标。这",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "表明需要关注公司的",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "分红力度和股东",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "回报情况。\n",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "- **时间分析**",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "：用户问题中",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "未提及具体时间",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "范围，因此不",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "涉及时间换算",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "，无需设定日期",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "区间。\n- **",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "概念提取**：",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "核心业务对象是",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "“公司”，筛选",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "条件是“光伏",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "行业”和“",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "分红比例高”。",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "需要从数据中",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "找出在该行业中",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "分红比例排名前",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "五的公司。\n",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "- **衡量内容",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "**：核心指标",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "是“累计分红",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "比例”，即 `",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "ACC_TOT_C",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "ASH_DVD_RATE",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "`，用于衡量",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "公司在过去一段时间内",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "向股东返还的",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "现金比例。\n",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "- **问题类型**",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "：这是一个**排名",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "统计**场景，",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "目的是找出光伏行业中",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "分红比例最高的前",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "五家公司。\n",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "- **元数据映",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "射**：根据",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "元数据字典",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "，“光伏行业”",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "可通过 `a_share",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "_label` 表",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "中的 `LABEL`",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": " 字段匹配；",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "“累计分红比例",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "”对应 `a",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "_share_dividend_der",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "ived` 表",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "中的 `ACC_T",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "OT_CASH_D",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "VD_RATE` 字",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "段；“公司",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "中文名称”对应",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": " `S_INFO_COMP",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "NAME`。\n\n",
+    "type": "QUESTION_INTERPRETATION_THOUGHT"
+}
+
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION_THOUGHT",
+    "status": "END"
+}
+
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION",
+    "status": "START"
+}
+
+data: {
+    "content": "\n\n您",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "希望针对**光伏",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "行业的公司**，",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "分析在**无",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "特定时间范围**",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "下的**累计分红",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "比例排名**，",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "找出分红比例最高的",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "前五家公司。",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "分析将重点关注各",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "公司的股东回报力度",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "。",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION"
+}
+
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION_CONCLUSION",
+    "status": "END"
+}
+
+data: {
+    "content": "",
+    "type": "QUESTION_INTERPRETATION",
+    "status": "END"
+}
+
+data: {
+    "content": "",
+    "type": "ANSWER",
+    "status": "START"
+}
+
+data: {
+    "content": {
+        "id": 76906994476864,
+        "askId": 76906994476865,
+        "dsl": {
+            "data": {
+                "total": 5,
+                "data": [
+                    {
+                        "分红比例": 652.4200,
+                        "公司名称": "上海爱旭新能源股份有限公司"
+                    },
+                    {
+                        "分红比例": 652.4200,
+                        "公司名称": "上海爱旭新能源股份有限公司"
+                    },
+                    {
+                        "分红比例": 652.4200,
+                        "公司名称": "上海爱旭新能源股份有限公司"
+                    },
+                    {
+                        "分红比例": 228.1000,
+                        "公司名称": "珈伟新能源股份有限公司"
+                    },
+                    {
+                        "分红比例": 228.1000,
+                        "公司名称": "珈伟新能源股份有限公司"
+                    }
+                ],
+                "meta": [
+                    {
+                        "field": "公司名称",
+                        "name": "公司名称"
+                    },
+                    {
+                        "field": "分红比例",
+                        "name": "分红比例"
+                    }
+                ],
+                "pageSize": 10,
+                "fields": {
+                    "columns": [
+                        "公司名称",
+                        "分红比例"
+                    ]
+                }
+            },
+            "widgetID": 89351262891008,
+            "errorCode": 0,
+            "title": "光伏行业分红比例高的前5家公司",
+            "type": "DATA_TABLE"
+        },
+        "visual": {
+            "session_id": 0,
+            "sql": "SELECT a.S_INFO_COMPNAME AS `公司名称`, a.ACC_TOT_CASH_DVD_RATE AS `分红比例` FROM a_share_dividend_derived a JOIN a_share_label b ON a.S_INFO_WINDCODE = b.S_INFO_WINDCODE WHERE b.LABEL LIKE '%光伏%' ORDER BY a.ACC_TOT_CASH_DVD_RATE DESC LIMIT 5",
+            "translatedSql": "SELECT\n    A股财务分红衍生.公司中文名称 AS `公司名称`,\n    A股财务分红衍生.累计分红比例 AS `分红比例`\nFROM\n    A股财务分红衍生\nJOIN\n    A股行业分类表\n        ON A股财务分红衍生.Wind代码 = A股行业分类表.股票代码\nWHERE\n    A股行业分类表.行业分类 LIKE '%光伏%'\nORDER BY\n    A股财务分红衍生.累计分红比例 DESC\nLIMIT\n    5",
+            "finalSql": "SELECT\n    a.S_INFO_COMPNAME AS `公司名称`,\n    a.ACC_TOT_CASH_DVD_RATE AS `分红比例`\nFROM\n    a_share_dividend_derived a\nJOIN\n    a_share_label b\n        ON a.S_INFO_WINDCODE = b.S_INFO_WINDCODE\nWHERE\n    b.LABEL LIKE '%光伏%'\nORDER BY\n    a.ACC_TOT_CASH_DVD_RATE DESC\nLIMIT\n    5",
+            "displayType": "DATA_TABLE",
+            "title": "光伏行业分红比例高的前5家公司",
+            "finalQuestion": "光伏行业分红比例高的前5家公司",
+            "dimensions": [
+                {
+                    "field": "公司名称",
+                    "name": "公司名称"
+                },
+                {
+                    "field": "分红比例",
+                    "name": "分红比例"
+                }
+            ],
+            "metrics": []
+        },
+        "likeStomp": "0",
+        "dataBase": "A股财务分红衍生",
+        "dataTables": [
+            {
+                "tableId": 89023360113153,
+                "tableName": "a_share_dividend_derived",
+                "tableDisplayName": "A股财务分红衍生"
+            },
+            {
+                "tableId": 89023360113683,
+                "tableName": "a_share_label",
+                "tableDisplayName": "A股行业分类表"
+            }
+        ],
+        "status": 0,
+        "predictQuestions": [
+            "其他新能源行业的公司分红比例与光伏行业相比如何？",
+            "分红比例高的前5家光伏公司，它们的净利润情况如何？",
+            "过去三年，光伏行业分红比例高的公司是否有显著变化？"
+        ],
+        "trace": [
+            "2026-01-22 16:19:05:297 - [1-1] 请求大模型预制参数，faqProperties=FAQProperties(sqlUrl=http://8.130.107.206:5679/api/v1/chat/completions2, ssoUrl=null, dslUrl=http://8.130.107.206:5679/api/v1/chat/completionsdsl, callAITimeout=120, chatMode=chat_with_db_execute, modeName=null, knowUrl=http://8.130.107.206:6000/analyze, registerUrl=http://8.130.107.206:5679/api/v1/chat/register, registerDelUrl=http://8.130.107.206:5679/api/v1/chat/unregister, sqlInterpretationUrl=http://8.130.107.206:5679/chat/api/zov/parse, ackUrl=http://52.82.11.208:8078/robot/register/config/update, traceFlg=true, fewShotAddUrl=http://8.130.107.206:5679/api/v1/chat/fewshot/add, fewShotUpdateUrl=http://8.130.107.206:5679/api/v1/chat/fewshot/update, fewShotDeleteUrl=http://8.130.107.206:5679/api/v1/chat/fewshot/delete, embeddingUrl=http://8.130.107.206:5679/api/v1/zov_embeddings, recognizeDomainWithAI=true, recognizeDomainUrl=http://8.130.107.206:5679/api/v1/chat/intent/domains/similar, recognizeDomainWithAIUrl=http://8.130.107.206:5679/api/v1/chat/intent/domains/model, recognizeDomainTimeout=10000, disableDomainRecognize=true, commonAIUrl=http://113.44.121.105:9862/chat/api/zov/chat/stream/text, general=http://8.130.107.206:5679/api/v1/chat/general, may2ask=http://8.130.107.206:5679/chat/api/zov/may2ask, questionRecommend=http://8.130.107.206:5679/chat/api/zov/question_recommend, agentMode=tongyi_proxyllm)",
+            "2026-01-22 16:19:05:333 - [1-2] 机器人配置请求结果：89,040,136,787,200 {\"sourceId\":0,\"agencyID\":1916705084137349121,\"permission\":\"0\",\"confirmBeforeAnswer\":1,\"aiModelName\":\"beaver\",\"dataParse\":\"1\",\"sourceLogicName\":\"ijaeabehgehhee\",\"registerId\":\"89040147647744\",\"resisterType\":\"SINGLE\",\"appID\":0,\"chatModeName\":\"chat_with_db_execute\",\"promptTemplate\":\"\",\"aiModelId\":76589737620482,\"sqlAndDsl\":\"\"}",
+            "2026-01-22 16:19:05:334 - [2] - 问题是否命中缓存 - false",
+            "2026-01-22 16:19:05:335 - [4] - 问题关键词联想业务属性信息补全 null",
+            "2026-01-22 16:19:05:336 - [5] - 业务术语文本替换后最终问题： 光伏行业分红比例高的前5家公司",
+            "2026-01-22 16:19:05:337 - [6] - 业务术语提示词： null",
+            "2026-01-22 16:19:16:608 - [8] - 提示词模板：",
+            "2026-01-22 16:19:16:973 - [9] - 采用以下策略调用AI ：串行执行",
+            "2026-01-22 16:19:17:083 - [7] - 反向查找表和字段：{港铁公司=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}, {highlights=公司, field=hk_share_dividend_derived.S_INFO_NAME, match=LIKE}], 美图公司=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}, {highlights=公司, field=hk_share_dividend_derived.S_INFO_NAME, match=LIKE}], 太古股份公司A=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}], 中金公司=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}, {highlights=公司, field=hk_share_dividend_derived.S_INFO_NAME, match=LIKE}], 心动公司=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}], 新鸿基公司=[{highlights=公司, field=hk_share_description.S_INFO_NAME, match=LIKE}, {highlights=公司, field=hk_share_dividend_derived.S_INFO_NAME, match=LIKE}]}",
+            "['Table:a_share_label\\n Comment:A股行业分类表\\n Fields:(LABEL:(行业分类) \\n S_INFO_WINDCODE:(股票代码))', 'Table:a_share_dividend_derived\\n Comment:A股财务分红衍生\\n Fields:(S_INFO_NAME:(证券简称) \\n ACC_TOT_CASH_DVD:(累计分红(百万元) \\n ANNUAL_CUM_CASH_DIV_TIMES:(年度累计现金分红次数) \\n ACC_CASH_DVD_PER_SH_PRE_TAX:(累计股利(元) \\n S_INFO_COMPNAME:(公司中文名称) \\n S_INFO_WINDCODE:(Wind代码) \\n FISCAL_YEAR:(报告年度) \\n REPORT_PERIOD:(报告期) \\n ACC_TOT_CASH_DVD_RATE:(累计分红比例))', 'Table:hk_share_dividend_derived\\n Comment:港股财务分红衍生\\n Fields:(S_INFO_WINDCODE:(股票代码) \\n ACC_TOT_CASH_DVD:(年度累计现金分红总额(百万元) \\n ANNUAL_CUM_CASH_DIV_TIMES:(年度累计现金分红次数) \\n S_INFO_COMPNAME:(公司中文名称) \\n ACC_CASH_DVD_PER_SH_PRE_TAX:(年度每股股利(元) \\n S_INFO_NAME:(股票简称) \\n ACC_TOT_CASH_DVD_RATE:(年度现金分红比例) \\n FISCAL_YEAR:(报告年度))', \"Table:hk_share_description, alias:'testd'\\n Comment:香港股票基本资料\\n Fields:(S_INFO_NAME:(股票简称, ['港铁公司', '美图公司', '太古股份公司A', '中金公司', '心动公司', '新鸿基公司']))\"]",
+            "\n你是一个 **SQL 生成专家**。  \n请基于 **用户选择的数据库**、**表结构定义**、**表关系**、**子问题** 与 **历史信息补全规则**，生成 **语法正确、业务合理、可直接执行的一条 SQL 查询语句**。\n\n表结构定义:\n  ['Table:a_share_label\\n Comment:A股行业分类表\\n Fields:(LABEL:(行业分类) \\n S_INFO_WINDCODE:(股票代码))', 'Table:a_share_dividend_derived\\n Comment:A股财务分红衍生\\n Fields:(S_INFO_NAME:(证券简称) \\n ACC_TOT_CASH_DVD:(累计分红(百万元) \\n ANNUAL_CUM_CASH_DIV_TIMES:(年度累计现金分红次数) \\n ACC_CASH_DVD_PER_SH_PRE_TAX:(累计股利(元) \\n S_INFO_COMPNAME:(公司中文名称) \\n S_INFO_WINDCODE:(Wind代码) \\n FISCAL_YEAR:(报告年度) \\n REPORT_PERIOD:(报告期) \\n ACC_TOT_CASH_DVD_RATE:(累计分红比例))', 'Table:hk_share_dividend_derived\\n Comment:港股财务分红衍生\\n Fields:(S_INFO_WINDCODE:(股票代码) \\n ACC_TOT_CASH_DVD:(年度累计现金分红总额(百万元) \\n ANNUAL_CUM_CASH_DIV_TIMES:(年度累计现金分红次数) \\n S_INFO_COMPNAME:(公司中文名称) \\n ACC_CASH_DVD_PER_SH_PRE_TAX:(年度每股股利(元) \\n S_INFO_NAME:(股票简称) \\n ACC_TOT_CASH_DVD_RATE:(年度现金分红比例) \\n FISCAL_YEAR:(报告年度))', \"Table:hk_share_description, alias:'testd'\\n Comment:香港股票基本资料\\n Fields:(S_INFO_NAME:(股票简称, ['港铁公司', '美图公司', '太古股份公司A', '中金公司', '心动公司', '新鸿基公司']))\"]\n\n表关系:\n  ['a_share_dividend_derived.S_INFO_WINDCODE -> a_share_label.S_INFO_WINDCODE ']\n  \n用户问题:\n  光伏行业分红比例高的前5家公司 \n    \n用户问题分析:\n  ## 思考\n- **知识引用**：根据知识库，问题“光伏行业分红比例高的前5家公司”涉及的是财务分红数据的分析，尤其是“累计分红比例”这一指标。这表明需要关注公司的分红力度和股东回报情况。\n- **时间分析**：用户问题中未提及具体时间范围，因此不涉及时间换算，无需设定日期区间。\n- **概念提取**：核心业务对象是“公司”，筛选条件是“光伏行业”和“分红比例高”。需要从数据中找出在该行业中分红比例排名前五的公司。\n- **衡量内容**：核心指标是“累计分红比例”，即 `ACC_TOT_CASH_DVD_RATE`，用于衡量公司在过去一段时间内向股东返还的现金比例。\n- **问题类型**：这是一个**排名统计**场景，目的是找出光伏行业中分红比例最高的前五家公司。\n- **元数据映射**：根据元数据字典，“光伏行业”可通过 `a_share_label` 表中的 `LABEL` 字段匹配；“累计分红比例”对应 `a_share_dividend_derived` 表中的 `ACC_TOT_CASH_DVD_RATE` 字段；“公司中文名称”对应 `S_INFO_COMPNAME`。\n\n-TOC-\n\n您希望针对**光伏行业的公司**，分析在**无特定时间范围**下的**累计分红比例排名**，找出分红比例最高的前五家公司。分析将重点关注各公司的股东回报力度。\n  \n指标和维度信息：\n  {'a_share_label': {'table_comment': 'A股行业分类表', 'dimensions': [{'field_name': 'LABEL', 'field_comment': '行业分类'}, {'field_name': 'S_INFO_WINDCODE', 'field_comment': '股票代码'}], 'metrics': []}, 'a_share_dividend_derived': {'table_comment': 'A股财务分红衍生', 'dimensions': [{'field_name': 'REPORT_PERIOD', 'field_comment': '报告期'}, {'field_name': 'S_INFO_WINDCODE', 'field_comment': 'Wind代码'}, {'field_name': 'FISCAL_YEAR', 'field_comment': '报告年度'}], 'metrics': [{'field_name': 'ACC_TOT_CASH_DVD_RATE', 'field_comment': '累计分红比例'}, {'field_name': 'ANNUAL_CUM_CASH_DIV_TIMES', 'field_comment': '年度累计现金分红次数'}, {'field_name': 'ACC_TOT_CASH_DVD', 'field_comment': '累计分红(百万元)'}, {'field_name': 'ACC_CASH_DVD_PER_SH_PRE_TAX', 'field_comment': '累计股利(元)'}]}, 'hk_share_dividend_derived': {'table_comment': '港股财务分红衍生', 'dimensions': [{'field_name': 'S_INFO_WINDCODE', 'field_comment': '股票代码'}, {'field_name': 'FISCAL_YEAR', 'field_comment': '报告年度'}], 'metrics': [{'field_name': 'ACC_TOT_CASH_DVD_RATE', 'field_comment': '年度现金分红比例'}, {'field_name': 'ANNUAL_CUM_CASH_DIV_TIMES', 'field_comment': '年度累计现金分红次数'}, {'field_name': 'ACC_CASH_DVD_PER_SH_PRE_TAX', 'field_comment': '年度每股股利(元)'}, {'field_name': 'ACC_TOT_CASH_DVD', 'field_comment': '年度累计现金分红总额(百万元)'}]}}\n  \n要求：\n    a) 识别用户问题中的日期描述类型（绝对日期如\"2024年\"或相对日期如\"上个月\"）\n    b) 若为相对日期，基于当前日期(2026年1月22日)计算具体起止日期（如\"最近三个月\"需转换为具体日期范围）\n    d) 生成sql 若有给出字段单位则表别名中加上字段单位（如：'销售额（万元）'）\n    e) 若查询的字段附有格式，请用日期转换函数转换成该格式\n    f) SQL 中必须使用给出的 **全量表名**，并且为表设置别名  \n    g)时间与对象解析规则（重要）\n      - **优先只使用当前用户问题中明确给出的时间、地点、对象等条件**,如果当前问题中的时间或对象信息 **完整且明确**，**禁止使用历史信息进行补充**\n      - 如果当前问题中的对象不完整、 **未出现任何时间描述**，从从 给出的历史信息中**最近一次、语义最相关**的历史问题中补全缺失的时间、地点或对象\n      - 若历史信息中仍无法补全，则使用规则中的默认时间逻辑（如 CURRENT_DATE）\n    \n\n\n约束:\n    1. 只能使用表结构信息中提供的表来生成 sql，如果无法根据提供的表结构中生成 sql ，请返回 \"\" 禁止随意捏造信息。\n    2. sql 中不能出现 select *\n    3. 请注意生成SQL时不要弄错表和列的关系\n    4. 请检查SQL的正确性，并保证正确的情况下优化查询性能\n    5. 年份为提交时间在所在年份的订单。\n    6. 请不要输出SQL以外的语言。\n    7. SQL中请不要输出\\n等特殊字符。\n    8. 数据库表名，字段名中间不能加入空格\n    9. SQL中允许包含@，#符号\n    10. 生成的sql中不允许使用双引号包裹字段\n    11. 当前时间是2026年。\n    12. SQL 必须生成为一行, 不能分行\n    13. 请注意生成SQL时考虑业务术语。\n    15. 请注意生成SQL时考虑参考例子中的问题和SQL信息\n    16. 请注意生成SQL时不限制查询结果条数\n    17. 今日,今天采用CURRENT_DATE()函数。\n    18. like 中 value 必须 %value% 格式\n    19. 错误信息中如果包含了 no such column: value 或者 no such table: value，请再次生成sql时必须考虑value,以保证sql的正确性\n    20. 生成的sql语句必须使用双引号包裹\n    21. 请反复对照表中的字段是否正确，不能编造字段\n    22. 今日,今天采用CURRENT_DATE()函数。\n    23. 请生成SQL语句时确保所有关键词、表名、字段名之间必须保留空格，禁止关键词、函数、字段、表名拼接在一起。\n    24. 列别名必须：\n        - 使用 `AS`\n        - 为中文\n        - 少于 10 个字符\n        - 使用反单引号包裹\n    25. 特别注意，生成sql语句中的 where 条件中必须使用模糊 like 匹配.\n\n    \n\n    请注意生成sql时，如果where条件中使用了'like 港铁公司', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 港铁公司', 该值来自hk_share_dividend_derived表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 美图公司', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 美图公司', 该值来自hk_share_dividend_derived表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 太古股份公司A', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 中金公司', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 中金公司', 该值来自hk_share_dividend_derived表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 心动公司', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 新鸿基公司', 该值来自hk_share_description表的S_INFO_NAME字段\n    请注意生成sql时，如果where条件中使用了'like 新鸿基公司', 该值来自hk_share_dividend_derived表的S_INFO_NAME字段\n    \n      \n    \n历史信息:\n    \n\n业务术语：\n    \n    \n参考例子:\n    \n    \n请一步步思考并按照以下json格式回复：\n    \"{\\n    \\\"sql\\\": \\\"SQL Query to run\\\"\\n}\"\n\n请考虑上一次生成SQL的错误信息：\n    \n    \n",
+            "2026-01-22 16:19:27:836 - 【最终SQL校验】：SELECT * FROM (SELECT a.S_INFO_COMPNAME AS `公司名称`, a.ACC_TOT_CASH_DVD_RATE AS `分红比例` FROM a_share_dividend_derived a JOIN a_share_label b ON a.S_INFO_WINDCODE = b.S_INFO_WINDCODE WHERE b.LABEL LIKE '%光伏%' ORDER BY a.ACC_TOT_CASH_DVD_RATE DESC LIMIT 5) ZOV_SUB_ALIAS_FOR_LIMIT LIMIT 91"
+        ],
+        "renderType": "charts"
+    },
+    "type": "ANSWER"
+}
+
+data: {
+    "content": "",
+    "type": "ANSWER",
+    "status": "END"
+}
