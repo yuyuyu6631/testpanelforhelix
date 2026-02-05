@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .models import init_db
-from .routers import cases, runner, generator, config, reports, templates
+from .routers import cases, runner, generator, config, reports, templates, tools
 
 # Initialize DB tables
 init_db()
@@ -42,6 +42,7 @@ app.include_router(generator.router)
 app.include_router(config.router)
 app.include_router(reports.router)
 app.include_router(templates.router)
+app.include_router(tools.router)
 
 @app.get("/")
 def read_root():

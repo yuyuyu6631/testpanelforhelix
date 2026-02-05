@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input, Select, Button, Card, Tabs, message, Row, Col, InputNumber, Switch } from 'antd';
-import { Save, ArrowLeft } from 'lucide-react';
+import { Form, Input, Select, Button, Card, Tabs, message, Row, Col, InputNumber, Switch, Modal } from 'antd';
+import { Save, ArrowLeft, Terminal } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { TemplateService } from '../../services/templates';
+import { ToolsService } from '../../services/tools';
 import { InterfaceTemplate } from '../../types/templates';
 import { PreviewPanel } from '../../components/templates/PreviewPanel';
 
@@ -17,6 +18,8 @@ const TemplateEdit: React.FC = () => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
     const [currentTemplate, setCurrentTemplate] = useState<Partial<InterfaceTemplate>>({});
+    const [isImportModalVisible, setIsImportModalVisible] = useState(false);
+    const [curlCommand, setCurlCommand] = useState('');
 
     useEffect(() => {
         if (!isNew && id) {
@@ -75,13 +78,93 @@ const TemplateEdit: React.FC = () => {
         } catch (e) { }
     };
 
+    const handleCurlImport = async () => {
+        if (!curlCommand.trim()) {
+            message.warning('请输入 cURL 命令');
+            return;
+        }
+        setLoading(true);
+        try {
+            const result = await ToolsService.parseCurl(curlCommand);
+
+            // Smart URL split: base_url + endpoint
+            let baseUrl = '';
+            let endpoint = '';
+            try {
+                const urlObj = new URL(result.url);
+                baseUrl = urlObj.origin;
+                endpoint = urlObj.pathname + urlObj.search;
+            } catch (e) {
+                baseUrl = result.url;
+            }
+
+            form.setFieldsValue({
+                method: result.method,
+                base_url: baseUrl,
+                endpoint: endpoint,
+            });
+
+            // 1. 智能处理 Body Type & 格式化
+            let bodyType = 'none';
+            let formattedBody = result.body;
+
+            if (result.body) {
+                bodyType = 'raw'; // 默认回退
+
+                // 查找 Content-Type (不区分大小写)
+                const contentTypeKey = Object.keys(result.headers).find(k => k.toLowerCase() === 'content-type');
+                const contentTypeValue = contentTypeKey ? result.headers[contentTypeKey].toLowerCase() : '';
+
+                if (contentTypeValue.includes('application/json')) {
+                    bodyType = 'json';
+                    try {
+                        const jsonObj = JSON.parse(result.body);
+                        formattedBody = JSON.stringify(jsonObj, null, 2);
+                    } catch (e) {
+                        // 解析失败则保持原样
+                    }
+                } else if (
+                    contentTypeValue.includes('application/x-www-form-urlencoded') ||
+                    contentTypeValue.includes('multipart/form-data')
+                ) {
+                    bodyType = 'form-data';
+                }
+            }
+
+            // 2. 回填 Headers (当前 UI 为 TextArea，故使用 JSON 字符串)
+            // 如果后续 UI 改为键值对列表，此处可改为数组格式
+            const headersStr = JSON.stringify(result.headers, null, 2);
+
+            form.setFieldsValue({
+                headers: headersStr,
+                body_template: formattedBody,
+                body_type: bodyType
+            });
+
+            updateCurrentState();
+            message.success('cURL 命令解析成功');
+            setIsImportModalVisible(false);
+            setCurlCommand('');
+        } catch (error: any) {
+            message.error('解析失败: ' + error.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div style={{ padding: 24, height: '100%', display: 'flex', flexDirection: 'column' }}>
             <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'space-between' }}>
                 <Button icon={<ArrowLeft size={16} />} onClick={() => navigate('/templates')}>
                     返回
                 </Button>
-                <div>
+                <div style={{ display: 'flex', gap: 8 }}>
+                    <Button
+                        icon={<Terminal size={16} />}
+                        onClick={() => setIsImportModalVisible(true)}
+                    >
+                        cURL 导入
+                    </Button>
                     <Button
                         type="primary"
                         icon={<Save size={16} />}
@@ -233,6 +316,25 @@ const TemplateEdit: React.FC = () => {
                     <PreviewPanel template={currentTemplate} />
                 </div>
             </Form>
+
+            <Modal
+                title="通过 cURL 命令导入"
+                open={isImportModalVisible}
+                onOk={handleCurlImport}
+                onCancel={() => setIsImportModalVisible(false)}
+                confirmLoading={loading}
+                width={700}
+                destroyOnClose
+            >
+                <div style={{ marginBottom: 12 }}>请粘贴一段完整的 cURL 命令：</div>
+                <TextArea
+                    rows={10}
+                    value={curlCommand}
+                    onChange={e => setCurlCommand(e.target.value)}
+                    placeholder="curl -X POST https://api.example.com/v1/user -H 'Content-Type: application/json' -d '{&quot;id&quot;:1}'"
+                    style={{ fontFamily: 'monospace' }}
+                />
+            </Modal>
         </div>
     );
 };

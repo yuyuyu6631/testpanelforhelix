@@ -90,3 +90,15 @@ class TestBatch(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+# ================= Tools Schemas =================
+class CurlParseRequest(BaseModel):
+    curl_command: str
+
+
+class CurlParseResponse(BaseModel):
+    method: str
+    url: str
+    headers: Dict[str, str]
+    body: Optional[str] = None

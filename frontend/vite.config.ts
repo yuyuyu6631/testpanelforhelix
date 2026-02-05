@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
           ws: true
         },
         '/settings': 'http://127.0.0.1:8001',
+        '/tools': 'http://127.0.0.1:8001',
       },
     },
     plugins: [react()],
