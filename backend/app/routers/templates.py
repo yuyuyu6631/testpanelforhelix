@@ -78,24 +78,33 @@ def debug_template(request: schemas.DebugRequest, db: Session = Depends(get_db))
     tmpl = request.template
     vars = request.variables or {}
     
-    # 1. Render Template (Simple string format or Jinja2 if needed)
-    # Using simple .format() for now, can be upgraded to jinja2
+    # 1. Render Template
     def render(text):
         if not text: return text
         try:
-            # First try Jinja2 style {{var}} -> require jinja2 lib or simple replace
-            # Let's use simple replace for {{key}} to value
             import re
             for k, v in vars.items():
-                text = re.sub(f"{{{{\s*{k}\s*}}}}", str(v), text)
+                # 使用 re.escape 防止变量名中的特殊字符干扰正则
+                pattern = rf"{{{{\s*{re.escape(k)}\s*}}}}"
+                text = re.sub(pattern, str(v), text)
             return text
-        except Exception as e:
+        except Exception:
             return text
+
+    # 初始化返回结构，防止前端崩溃
+    debug_result = {
+        "request": {"url": "", "method": tmpl.method, "headers": {}, "body": None},
+        "response": {"status_code": 0, "headers": {}, "text": "", "json": None, "duration": 0},
+        "error": None
+    }
 
     try:
         # A. URL
-        final_url = f"{tmpl.base_url.rstrip('/')}/{tmpl.endpoint.lstrip('/')}"
+        base = (tmpl.base_url or "").rstrip('/')
+        endpoint = (tmpl.endpoint or "").lstrip('/')
+        final_url = f"{base}/{endpoint}" if base else endpoint
         final_url = render(final_url)
+        debug_result["request"]["url"] = final_url
         
         # B. Headers
         final_headers = {}
@@ -103,30 +112,39 @@ def debug_template(request: schemas.DebugRequest, db: Session = Depends(get_db))
             try:
                 headers_json = json.loads(tmpl.headers)
                 for k, v in headers_json.items():
-                    final_headers[k] = render(v)
-            except:
-                pass
+                    final_headers[k] = render(str(v))
+            except Exception as e:
+                debug_result["error"] = f"Headers parse error: {str(e)}"
+        
+        debug_result["request"]["headers"] = final_headers
                 
         # C. Body
         final_body = None
-        if tmpl.body_type == "json" and tmpl.body_template:
+        if tmpl.body_template:
             rendered_body_str = render(tmpl.body_template)
-            try:
-                final_body = json.loads(rendered_body_str)
-            except:
-                final_body = rendered_body_str # Fallback to string if invalid json
-        elif tmpl.body_template:
-            final_body = render(tmpl.body_template)
+            if tmpl.body_type == "json":
+                try:
+                    final_body = json.loads(rendered_body_str)
+                except Exception as e:
+                    final_body = rendered_body_str
+                    debug_result["error"] = f"Body JSON parse warning: {str(e)}"
+            else:
+                final_body = rendered_body_str
+        
+        debug_result["request"]["body"] = final_body
 
         # D. Auth
-        # TODO: Implement auth logic (Bearer, etc)
         if tmpl.auth_type == "bearer" and tmpl.auth_config:
             try:
                 auth_cfg = json.loads(tmpl.auth_config)
-                token = render(auth_cfg.get("token", ""))
+                token = render(str(auth_cfg.get("token", "")))
                 final_headers["Authorization"] = f"Bearer {token}"
             except:
                 pass
+
+        if debug_result["error"]:
+             # 如果之前有解析错误，提前返回
+             return debug_result
 
         # Execute Request
         start_time = datetime.now()
@@ -134,30 +152,29 @@ def debug_template(request: schemas.DebugRequest, db: Session = Depends(get_db))
             method=tmpl.method,
             url=final_url,
             headers=final_headers,
-            json=final_body if tmpl.body_type == "json" else None,
-            data=final_body if tmpl.body_type != "json" else None,
-            timeout=tmpl.timeout
+            json=final_body if tmpl.body_type == "json" and isinstance(final_body, dict) else None,
+            data=final_body if tmpl.body_type != "json" or not isinstance(final_body, dict) else None,
+            timeout=tmpl.timeout or 10
         )
-        duration = (datetime.now() - start_time).total_seconds()
+        duration = round((datetime.now() - start_time).total_seconds(), 3)
         
-        return {
-            "request": {
-                "url": final_url,
-                "method": tmpl.method,
-                "headers": final_headers,
-                "body": final_body
-            },
-            "response": {
-                "status_code": resp.status_code,
-                "headers": dict(resp.headers),
-                "text": resp.text,
-                "json": resp.json() if resp.headers.get('content-type', '').startswith('application/json') else None,
-                "duration": duration
-            }
+        debug_result["response"] = {
+            "status_code": resp.status_code,
+            "headers": dict(resp.headers),
+            "text": resp.text,
+            "json": None,
+            "duration": duration
         }
+        
+        # Try to parse response JSON
+        try:
+            if resp.headers.get('content-type', '').startswith('application/json'):
+                debug_result["response"]["json"] = resp.json()
+        except:
+            pass
+            
+        return debug_result
 
     except Exception as e:
-        return {
-            "error": str(e),
-            "step": "execution"
-        }
+        debug_result["error"] = str(e)
+        return debug_result

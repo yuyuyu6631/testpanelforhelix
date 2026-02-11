@@ -150,3 +150,8 @@ cython_debug/
 *.xlsx
 /需求/*.xlsx
 !需求/测试用例.xlsx
+
+# Helix AutoTest Local Deploy
+deploy/offline_packages/
+*.tar
+backend.log

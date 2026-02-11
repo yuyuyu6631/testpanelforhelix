@@ -5,7 +5,7 @@ export const runnerService = {
     // Trigger test run
     runTests: async (caseIds: number[] = []) => {
         // POST /run body: { case_ids: [] }
-        return client.post<{ batch_id: string; message: string }>('/run', { case_ids: caseIds }) as unknown as Promise<{ batch_id: string; message: string }>;
+        return client.post<{ batch_id: string; message: string }>('/run/', { case_ids: caseIds }) as unknown as Promise<{ batch_id: string; message: string }>;
     },
 
     // Stop test run

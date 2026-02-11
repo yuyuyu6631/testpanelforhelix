@@ -6,6 +6,19 @@ import webbrowser
 import socket
 import signal
 
+def get_local_ip():
+    """获取本机局域网 IP 地址"""
+    try:
+        # 创建一个 UDP 套接字，不需要真正连接
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        # 连接一个公网 IP（这里用谷歌 DNS），只是为了触发内核获取本地接口 IP
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "127.0.0.1"
+
 def check_port(port):
     """检查端口是否被占用"""
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -44,6 +57,9 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
     
+    # 获取本机 IP
+    local_ip = get_local_ip()
+    
     # 强制安装/检查依赖
     install_dependencies()
     
@@ -56,8 +72,10 @@ def main():
         print("! 提示: 端口 3000 已被占用。Vite 可能会自动切换到 3001 端口。")
 
     # 启动命令
+    # 后端开启 0.0.0.0 允许局域网访问
     backend_cmd = [sys.executable, "-m", "uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "8001", "--reload"]
     npm_cmd = "npm.cmd" if os.name == 'nt' else "npm"
+    # 前端 vite 默认通过 vite.config.ts 配置 host: '0.0.0.0'
     frontend_cmd = [npm_cmd, "run", "dev"]
     
     processes = []
@@ -80,16 +98,18 @@ def main():
         print("\n[4/4] 正在打开浏览器...")
         time.sleep(5) # 给服务一点启动时间
         
-        # 注意：如果端口被占用，前端可能在 3001
+        # 优先使用本地地址，但在控制台显示局域网地址
         url = "http://localhost:3000"
         print(f"  > 尝试访问 {url}")
         webbrowser.open(url)
         
         print("\n------------------------------------------")
-        print("系统已尝试启动！")
-        print("如果浏览器没有自动打开或显示错误，请手动访问：")
-        print("前端地址: http://localhost:3000 (或 3001/3002)")
-        print("后端文档: http://localhost:8001/docs")
+        print("系统已启动成功！")
+        print("您现在可以通过以下地址访问：")
+        print(f" 本机地址: http://localhost:3000")
+        if local_ip != "127.0.0.1":
+            print(f" 局域网地址: http://{local_ip}:3000")
+        print(f" 后端文档: http://localhost:8001/docs")
         print("------------------------------------------")
         print("按 Ctrl+C 停止所有服务。\n")
 

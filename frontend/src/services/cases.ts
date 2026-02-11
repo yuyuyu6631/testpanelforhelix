@@ -4,12 +4,12 @@ import type { TestCase } from '../types';
 export const casesService = {
     // Get cases with pagination
     getCases: async (params?: { skip?: number; limit?: number }) => {
-        return client.get<TestCase[]>('/cases', { params }) as unknown as Promise<TestCase[]>;
+        return client.get<TestCase[]>('/cases/', { params }) as unknown as Promise<TestCase[]>;
     },
 
     // Create new case
     createCase: async (data: Partial<TestCase>) => {
-        return client.post<TestCase>('/cases', data);
+        return client.post<TestCase>('/cases/', data);
     },
 
     // Update case status

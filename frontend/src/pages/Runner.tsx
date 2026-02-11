@@ -20,8 +20,9 @@ const Runner: React.FC = () => {
     if (!activeBatchId || !isRunning) return;
 
     // Connect WS
-    const host = window.location.hostname;
-    const wsUrl = `ws://${host}:8001/run/ws/${activeBatchId}`;
+    const host = window.location.host;
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${protocol}//${host}/run/ws/${activeBatchId}`;
     console.log("Connecting WS:", wsUrl);
 
     const socket = new WebSocket(wsUrl);

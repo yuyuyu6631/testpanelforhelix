@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  helix-server:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: helix-server
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      # 挂载数据目录以持久化 SQLite 数据库
+      - ../data:/app/data
+      # 挂载日志目录 (可选)
+      # - ../logs:/app/logs
+    environment:
+      - TZ=Asia/Shanghai

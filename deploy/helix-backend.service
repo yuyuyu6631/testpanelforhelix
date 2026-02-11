@@ -1,0 +1,26 @@
+[Unit]
+Description=Helix AutoTest Backend
+After=network.target
+
+[Service]
+# 修改为实际用户和组
+User=appuser
+Group=appuser
+
+# 设定工作目录(后端代码上一级目录)
+WorkingDirectory=/var/www/helix
+
+# 环境变量
+Environment="PATH=/var/www/helix/venv/bin:/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONPATH=/var/www/helix"
+
+# 启动命令 (使用 uvicorn 启动 config.py 中定义的 app)
+# 假设 backend 文件夹在 /var/www/helix/backend
+ExecStart=/var/www/helix/venv/bin/python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8001
+
+# 重启策略
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

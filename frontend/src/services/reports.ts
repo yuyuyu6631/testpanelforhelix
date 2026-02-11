@@ -4,7 +4,7 @@ import type { TestBatch, ReportDetail } from '../types';
 export const reportsService = {
     // Get reports list
     getReports: async (params?: { skip?: number; limit?: number }) => {
-        return client.get<TestBatch[]>('/reports', { params }) as unknown as Promise<TestBatch[]>;
+        return client.get<TestBatch[]>('/reports/', { params }) as unknown as Promise<TestBatch[]>;
     },
 
     // Get report details

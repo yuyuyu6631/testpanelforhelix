@@ -6,7 +6,7 @@ const BASE_URL = '/templates';
 export const TemplateService = {
     // Get list of templates
     getAll: async (skip: number = 0, limit: number = 100): Promise<InterfaceTemplate[]> => {
-        return client.get(BASE_URL, { params: { skip, limit } });
+        return client.get(`${BASE_URL}/`, { params: { skip, limit } });
     },
 
     // Get single template
@@ -16,7 +16,7 @@ export const TemplateService = {
 
     // Create template
     create: async (data: Partial<InterfaceTemplate>): Promise<InterfaceTemplate> => {
-        return client.post(BASE_URL, data);
+        return client.post(`${BASE_URL}/`, data);
     },
 
     // Update template
